@@ -9,5 +9,5 @@
 **logs/
 **.env
 **__pycache__/
-
-ny_taxi_postgres_data
+.history
+**/ny_taxi_postgres_data/*
