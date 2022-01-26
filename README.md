@@ -14,58 +14,35 @@
 
 ### [Week 1: Introduction & Prerequisites](week_1_basics_n_setup)
 
-* Big Picture
-   * [x] Introduction to all instructors
-   * [x] What to expect in this course
-   * [x] Architecture / Data Flow
-   * [x] What do we want to build
-* GCP (5 mins)
-   * [x] Intro to GCP - Concepts: IAM, Cloud Storage, BigQuery (relevant components)
-   * [x] What is GCP, why we need it
-* [Docker (45 mins)](week_1_basics_n_setup/2_docker_sql)
-   * [x] What is Docker
-   * [x] Running Postgres locally with Docker
-   * [x] Putting some data for testing to local postres with Python
-   * [x] Packaging this script in docker
-   * [x] Running postgres and the script in one network
-   * [x] Docker compose and running pgadmin and postres together with docker-compose
-* [Data and SQL (15 mins)](week_1_basics_n_setup/2_docker_sql)
-   * [x] [Dataset: Taxi Rides NY dataset](dataset.md)
-   * [x] Experimentation: Taking a first look at the data 
-   * [x] Relevant SQL Queries (Refresher): group by, joins, window function, union
-* [Terraform (45-60 mins)](week_1_basics_n_setup/1_terraform_gcp)
-   * [x] Intro to Terraform - Concepts
-   * [x] Setting up GCP with TF: Storage, BigQuery
-* [Homework](week_1_basics_n_setup/homework.md)
+* Course overview
+* Introduction to GCP
+* Docker and docker-compose 
+* Running Postgres locally with Docker
+* Setting up infrastructure on GCP with Terraform
+* Preparing the environment for the course
+* Homework
+
+[Details](week_1_basics_n_setup)
 
 Duration: 2-2.5h
-
 
 ### [Week 2: Data ingestion](week_2_data_ingestion)
 
 Goal: Orchestrating a job to ingest web data to a Data Lake in its raw form.
 
-Instructor: Sejal
+Instructors: Sejal, Alexey, Ankush
 
-* Data Lake (GCS) -- 10 mins
-  * Basics, What is a Data Lake
-  * ELT vs. ETL
-  * Alternatives to components (S3/HDFS, Redshift, Snowflake etc.)
-* Orchestration (Airflow) -- 15 mins
-  * Basics
-  * What is an Orchestration Pipeline
-  * ...
+* Introduction to Data Lake (GCS) -- 10 mins
+  
+* Introduction to Orchestration (Airflow) -- 15 mins
+  
+* Workshop:
+  * Setting up Docker with Airflow: -- 15 mins
+  * Data ingestion DAG: -- 30 mins 
+    * Cloud-based, i.e. with GCP (GCS + BigQuery)
+    * Local, with Postgres
 
-* Demo:
-  * Setup: (15 mins)
-    * [ ] Docker pre-reqs (refresher)
-    * [x] Airflow env with Docker
-  * Data ingestion DAG - Demo (30 mins): 
-    * [x] Extraction: Download and unpack the data
-    * [ ] Pre-processing: Convert this raw data to parquet, partition (raw/yy/mm/dd)
-    * [x] Load: Raw data to GCS
-    * [x] Exploration: External Table for BigQuery -- Taking a look at the data
-    * [ ] Further Enhancements: Transfer Service (AWS -> GCP)
+* Further Enhancements: Transfer Service (AWS -> GCP)
    
 Duration: 1.5h
 
@@ -115,7 +92,7 @@ Instructor: Victoria
 * Extra knowledge:
     * DBT cli (local)
 
-Duration: 1.5-2h    
+Duration: 2h    
 
 
 ### [Week 5: Batch processing](week_5_batch_processing)
@@ -149,26 +126,14 @@ Instructor: Ankush
     * Partitoning of Kafka topic
     * Replication of Kafka topic
 * Consumer-producer
+* Schemas (avro)
 * Streaming
     * Kafka streams
-    * spark streaming-Transformation
 * Kafka connect
-* KSQLDB?
-* streaming analytics ???
-* (pretend rides are coming in a stream)
 * Alternatives (PubSub/Pulsar)
 
-Duration: 1-1.5h
+Duration: 1.5h
 
-### Upcoming buzzwords
-
-* Delta Lake/Lakehouse
-    * Databricks
-    * Apache iceberg
-    * Apache hudi
-* Data mesh
-
-Duration: 10 mins
 
 
 ### [Week 7, 8 & 9: Project](project)
@@ -177,6 +142,17 @@ Duration: 10 mins
 
 Duration: 2-3 weeks
 
+* Upcoming buzzwords
+  *  Delta Lake/Lakehouse
+    * Databricks
+    * Apache iceberg
+    * Apache hudi
+  * Data mesh
+  * KSQLDB
+  * Streaming analytics
+  * Mlops
+  
+Duration: 30 mins
 
 ## Overview
 
@@ -225,3 +201,13 @@ Prior experience with data engineering is not required.
 * **Q**: I'm 100% not sure I'll be able to attend. Can I still sign up?
   **A**: Yes, please do! You'll receive all the updates and then you can watch the course at your own pace. 
 * **Q**: Do you plan to run a ML engineering course as well? **A**: Glad you asked. [We do](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) :)
+
+
+## Our friends 
+
+Big thanks to other communities for helping us spread the word about the course: 
+
+* [DPhi](https://dphi.tech/)
+* [MLOps.community](https://mlops.community/)
+
+Check them out - they are cool!
